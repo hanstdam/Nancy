@@ -43,7 +43,7 @@ namespace Nancy.Routing
                 completedTask =>
                 {
                     var returnResult = completedTask.Result;
-                    if (!(returnResult is ValueType) && returnResult == null)
+                    if (returnResult == null) //!(returnResult is ValueType) && 
                     {
                         context.WriteTraceLog(
                             sb => sb.AppendLine("[DefaultRouteInvoker] Invocation of route returned null"));
